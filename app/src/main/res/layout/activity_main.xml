@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+android:background="#b1afb6"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:srcCompat="@drawable/ic_wave" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_marginLeft="30dp"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        app:cardElevation="20dp"
+
+        android:layout_marginTop="100dp"
+
+        app:layout_constraintVertical_bias="0.37">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_marginTop="50dp"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/stopwatch" />
+
+
+    <Chronometer
+
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp" />
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_width="wrap_content"
+ android:orientation="horizontal"
+    android:layout_marginTop="15dp"
+    android:layout_height="wrap_content">
+    <ImageView
+
+        android:id="@+id/imageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:onClick="startChronometer"
+        app:srcCompat="@drawable/start" />
+
+    <ImageView
+        android:layout_marginLeft="15dp"
+        android:id="@+id/imageView2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:onClick="pauseChronometer"
+
+        app:srcCompat="@drawable/pause" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_marginLeft="15dp"
+        android:onClick="resetChronometer"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/restart" />
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+</LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="150dp"
+        app:srcCompat="@drawable/ic_waved" />
+
+
+</LinearLayout>
